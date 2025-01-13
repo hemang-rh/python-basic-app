@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "py-cli-app"
+version = "1.0"
+description = "A simple CLI app using Typer"
+authors = ["Hemang Shishir <hshishir@redhat.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+typer = ">=0.15.1,<0.16.0"
+rich = ">=13.9.4,<14.0.0"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+
+[tool.poetry.scripts]
+py-cli = "py_cli_app.main:app"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
